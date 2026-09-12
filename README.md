@@ -2,6 +2,12 @@
 
 这是我围绕黑湖小工单做的两项现场适配产品原型：一个减少报工动作，一个重新思考车间公共屏上的个人绩效呈现。
 
+在线体验：
+
+- [项目说明页](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/)
+- [智能快捷报工](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/quick-report/)
+- [车间进度赛道](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/collaborative-progress/)
+
 项目包含三个独立页面：
 
 - 项目说明页：研究判断与两个原型入口
