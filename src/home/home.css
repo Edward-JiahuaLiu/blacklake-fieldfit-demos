@@ -1,0 +1,332 @@
+.home-shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.25rem 0 2.5rem;
+}
+
+.home-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--forest-900);
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  color: white;
+  background: var(--forest-800);
+}
+
+.candidate-label {
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.68fr);
+  gap: 3.5rem;
+  align-items: end;
+  padding: clamp(3.7rem, 8vw, 7.2rem) 0 clamp(2.7rem, 5vw, 4.5rem);
+}
+
+.hero-kicker {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: -2.1rem;
+  color: var(--forest-700);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.home-hero h1 {
+  margin: 0;
+  color: var(--forest-950);
+  font-size: clamp(3rem, 7vw, 6.15rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 1.02;
+}
+
+.home-hero h1 span {
+  color: var(--forest-600);
+}
+
+.hero-lead {
+  margin: 0 0 0.45rem;
+  color: #496b5a;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.85;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.demo-card {
+  position: relative;
+  display: flex;
+  min-height: 29rem;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(1.4rem, 3vw, 2.35rem);
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  background: rgba(255, 253, 246, 0.84);
+  box-shadow: var(--shadow);
+}
+
+.demo-card::after {
+  position: absolute;
+  right: -4rem;
+  bottom: -6rem;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  background: rgba(101, 184, 126, 0.12);
+  content: '';
+  pointer-events: none;
+}
+
+.demo-card:nth-child(2)::after {
+  background: rgba(245, 200, 92, 0.18);
+}
+
+.demo-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.demo-index {
+  color: rgba(25, 82, 58, 0.48);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.demo-icon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  border-radius: 1.1rem;
+  color: white;
+  background: var(--forest-800);
+  box-shadow: 0 12px 24px rgba(18, 59, 42, 0.16);
+}
+
+.demo-card:nth-child(2) .demo-icon {
+  color: var(--forest-950);
+  background: var(--sun);
+}
+
+.demo-eyebrow {
+  margin: 3.3rem 0 0.5rem;
+  color: var(--forest-600);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.demo-card h2 {
+  margin: 0;
+  color: var(--forest-950);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.demo-description {
+  max-width: 33rem;
+  margin: 1rem 0;
+  color: #4f705f;
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.test-question {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: auto;
+  padding: 1rem;
+  border: 1px solid rgba(33, 106, 72, 0.14);
+  border-radius: 1rem;
+  color: var(--forest-800);
+  background: rgba(223, 242, 229, 0.58);
+}
+
+.test-question svg {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+}
+
+.test-question p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.62;
+}
+
+.test-question span {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.demo-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  color: white;
+  background: var(--forest-800);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.demo-link:hover {
+  background: var(--forest-700);
+  transform: translateY(-2px);
+}
+
+.reasoning-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 3rem;
+  margin-top: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 2rem;
+  color: #f8fff9;
+  background: var(--forest-950);
+}
+
+.section-label {
+  margin: 0 0 0.55rem;
+  color: #9fd8b0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.reasoning-strip h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.reasoning-points {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.reasoning-points p {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 1rem;
+  color: #dcebe1;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reasoning-points svg {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  color: #9fd8b0;
+}
+
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 0 0;
+  color: #5f7c6d;
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+.home-footer p {
+  margin: 0;
+}
+
+.home-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--forest-700);
+  font-weight: 600;
+  text-underline-offset: 0.2rem;
+}
+
+@media (max-width: 760px) {
+  .candidate-label {
+    display: none;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero-kicker {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.7rem, 14vw, 4.6rem);
+  }
+
+  .demo-grid,
+  .reasoning-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-card {
+    min-height: 27rem;
+  }
+
+  .reasoning-strip {
+    gap: 1.5rem;
+  }
+
+  .home-footer {
+    flex-direction: column;
+  }
+}

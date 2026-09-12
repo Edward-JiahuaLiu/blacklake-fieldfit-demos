@@ -1,0 +1,11 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HomeApp } from './HomeApp';
+import '../shared/base.css';
+import './home.css';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <HomeApp />
+  </StrictMode>,
+);
