@@ -40,7 +40,7 @@ export function HomeApp() {
           </span>
           <span>FIELD / FIT</span>
         </a>
-        <span className="candidate-label">AI 产品经理候选人 · 产品原型</span>
+        <span className="candidate-label">27届创培生申请人·产品demo</span>
       </nav>
 
       <header className="home-hero">
