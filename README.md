@@ -1,14 +1,17 @@
 # 从快速跑通，到一线愿意持续用
 
-这是我围绕黑湖小工单做的两项现场适配产品原型：一个减少报工动作，一个重新思考车间公共屏上的个人绩效呈现。
+这是我申请黑湖2027届创培生准备的一份产品研究与两项现场适配原型：一个减少报工动作，一个重新思考车间公共屏上的个人绩效呈现。
 
 在线体验：
 
-- [项目说明页](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/)
+- [申请材料统一入口](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/)
+- [11页产品研究报告](https://www.figma.com/proto/zl4goF8HMUKxsMm7iE90BT/%E9%BB%91%E6%B9%96%E5%B0%8F%E5%B7%A5%E5%8D%95%EF%BD%9C2027%E5%88%9B%E5%9F%B9%E7%94%9F%E4%BA%A7%E5%93%81%E7%A0%94%E7%A9%B6?node-id=41-2&p=f&t=Lil6eDwJ3WOey6T1-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)
 - [智能快捷报工](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/quick-report/)
 - [车间进度赛道](https://edward-jiahualiu.github.io/blacklake-fieldfit-demos/collaborative-progress/)
 
-项目包含三个独立页面：
+首页汇总产品研究报告和两个独立 Demo；两个 Demo 之间没有业务状态联动。
+
+项目包含三个站内页面：
 
 - 项目说明页：研究判断与两个原型入口
 - `quick-report/`：智能快捷报工

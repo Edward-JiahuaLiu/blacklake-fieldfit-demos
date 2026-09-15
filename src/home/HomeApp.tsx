@@ -1,31 +1,53 @@
 import {
   ArrowUpRight,
+  BookOpenText,
   CircleGauge,
+  Megaphone,
   MousePointerClick,
   Route,
-  ShieldCheck,
   Sparkles,
+  UsersRound,
 } from 'lucide-react';
 
-const demos = [
+const reportUrl =
+  'https://www.figma.com/proto/zl4goF8HMUKxsMm7iE90BT/%E9%BB%91%E6%B9%96%E5%B0%8F%E5%B7%A5%E5%8D%95%EF%BD%9C2027%E5%88%9B%E5%9F%B9%E7%94%9F%E4%BA%A7%E5%93%81%E7%A0%94%E7%A9%B6?node-id=41-2&p=f&t=Lil6eDwJ3WOey6T1-1&scaling=contain&content-scaling=fixed&page-id=0%3A1';
+
+const materials = [
   {
     number: '01',
-    eyebrow: '一线操作',
-    title: '智能快捷报工',
-    description: '当前任务自动准备好。点击一次记录产量，误触可以马上撤销。',
-    question: '能否减少赶工时一次有效记录所需的动作？',
-    href: './quick-report/',
-    action: '打开大按钮 Demo',
-    Icon: MousePointerClick,
+    eyebrow: '产品研究 · 11页',
+    title: '黑湖小工单产品研究',
+    description:
+      '从行业与市场、产品特点和国内竞品出发，梳理小工单从“快速跑通”走向“持续适配现场”的机会。',
+    calloutLabel: '研究主线',
+    question: '管理者获得更清晰数据后，怎样进一步降低管理员和一线的使用成本？',
+    href: reportUrl,
+    action: '在线阅读报告',
+    external: true,
+    Icon: BookOpenText,
   },
   {
     number: '02',
+    eyebrow: '一线操作',
+    title: '智能快捷报工',
+    description: '当前任务自动准备好，完成一批只需点击一次；误触后可以马上撤销。',
+    calloutLabel: '设计回应',
+    question: '减少赶工时的填写动作，让报工更容易成为自然的工作步骤。',
+    href: './quick-report/',
+    action: '打开大按钮 Demo',
+    external: false,
+    Icon: MousePointerClick,
+  },
+  {
+    number: '03',
     eyebrow: '车间公共大屏',
     title: '车间进度赛道',
-    description: '七辆赛车沿同一张非线性地图前进，位置代表个人当班计划完成率。',
-    question: '趣味呈现是否比传统 Top5 更易理解，同时不增加压力？',
+    description: '七辆赛车沿同一张非线性地图前进，用行驶位置呈现个人当班计划完成率。',
+    calloutLabel: '设计回应',
+    question: '保留清晰的进度信息，也尝试缓和传统 Top5 带来的公开比较感。',
     href: './collaborative-progress/',
     action: '打开赛道 Demo',
+    external: false,
     Icon: Route,
   },
 ];
@@ -40,45 +62,55 @@ export function HomeApp() {
           </span>
           <span>FIELD / FIT</span>
         </a>
-        <span className="candidate-label">27届创培生申请人·产品demo</span>
+        <span className="candidate-label">27届创培生申请人 · 产品研究与 Demo</span>
       </nav>
 
       <header className="home-hero">
         <div className="hero-kicker">
-          <span>黑湖小工单产品研究</span>
+          <span>APPLICATION MATERIALS</span>
           <span aria-hidden="true">/</span>
-          <span>现场适配实验</span>
+          <span>产品研究与原型</span>
         </div>
         <h1>
-          从快速跑通，
-          <span>到一线愿意持续用</span>
+          先理解现场，
+          <span>再把想法做出来</span>
         </h1>
         <p className="hero-lead">
-          两个独立原型，分别回应报工动作成本与公开绩效呈现。它们不是效果结论，而是可以被观察、比较和推翻的产品假设。
+          一份围绕黑湖小工单的产品研究，以及两个针对一线使用体验的交互 Demo。我尝试从行业、竞品和现场角色出发，理解产品如何从“快速跑通”继续走向“持续使用”。
         </p>
+        <div className="profile-chips" aria-label="申请人背景">
+          <span>UCL Digital Humanities 硕士</span>
+          <span>公共关系与广告学本科 · 专业第三</span>
+          <span>田野训练 × AI 原型实践</span>
+        </div>
       </header>
 
-      <section className="demo-grid" aria-label="产品 Demo">
-        {demos.map(({ Icon, ...demo }) => (
-          <article className="demo-card" key={demo.number}>
+      <section className="demo-grid" aria-label="申请材料">
+        {materials.map(({ Icon, ...material }) => (
+          <article className="demo-card" key={material.number}>
             <div className="demo-card-topline">
-              <span className="demo-index number-font">{demo.number}</span>
+              <span className="demo-index number-font">{material.number}</span>
               <span className="demo-icon" aria-hidden="true">
                 <Icon size={24} />
               </span>
             </div>
-            <p className="demo-eyebrow">{demo.eyebrow}</p>
-            <h2>{demo.title}</h2>
-            <p className="demo-description">{demo.description}</p>
+            <p className="demo-eyebrow">{material.eyebrow}</p>
+            <h2>{material.title}</h2>
+            <p className="demo-description">{material.description}</p>
             <div className="test-question">
               <CircleGauge size={18} aria-hidden="true" />
               <p>
-                <span>待验证</span>
-                {demo.question}
+                <span>{material.calloutLabel}</span>
+                {material.question}
               </p>
             </div>
-            <a className="demo-link" href={demo.href}>
-              {demo.action}
+            <a
+              className="demo-link"
+              href={material.href}
+              target={material.external ? '_blank' : undefined}
+              rel={material.external ? 'noreferrer' : undefined}
+            >
+              {material.action}
               <ArrowUpRight size={19} aria-hidden="true" />
             </a>
           </article>
@@ -87,17 +119,21 @@ export function HomeApp() {
 
       <section className="reasoning-strip" aria-labelledby="reasoning-title">
         <div>
-          <p className="section-label">产品判断</p>
-          <h2 id="reasoning-title">让 AI 在后台准备，让一线只完成眼前动作</h2>
+          <p className="section-label">为什么是我</p>
+          <h2 id="reasoning-title">不同的学习经历，让我能从多个角度理解同一个问题</h2>
         </div>
         <div className="reasoning-points">
           <p>
-            <Sparkles size={19} aria-hidden="true" />
-            AI 建议任务、步长与工作量系数，管理员保留解释和覆盖权。
+            <Megaphone size={19} aria-hidden="true" />
+            公共关系与广告：从市场、用户与沟通理解问题
           </p>
           <p>
-            <ShieldCheck size={19} aria-hidden="true" />
-            所有数据均为本地模拟；头像不上传，刷新后恢复初始状态。
+            <UsersRound size={19} aria-hidden="true" />
+            社会学与人类学：进入现场，理解具体的人与流程
+          </p>
+          <p>
+            <Sparkles size={19} aria-hidden="true" />
+            数字人文与 AI 实践：把观察做成可以体验的方案
           </p>
         </div>
       </section>
